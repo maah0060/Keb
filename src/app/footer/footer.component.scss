@@ -1,17 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
-
 nav {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgb(242, 252, 255);
   height: 80px;
   display: flex;
   justify-content: center;
-  position: fixed;
-  width: 98vw;
-  align-items: center;
+  width: 100vw;
 }
 ul {
   justify-content: space-around;
@@ -24,7 +16,7 @@ li {
 }
 .heroPic {
   margin-top: 0;
-  width: 98vw;
+  width: 95vw;
   box-shadow: 2px 5px 10px #c9c4c4;
 }
 a {

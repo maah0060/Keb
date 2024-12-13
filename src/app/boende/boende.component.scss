@@ -1,0 +1,93 @@
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+h1 {
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 300;
+}
+h2 {
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.row {
+  display: flex;
+  background-color: rgb(242, 252, 255);
+  margin: 40px;
+}
+
+.bildStation {
+  display: flex;
+  position: relative;
+  width: 50vw;
+}
+.col1 {
+  margin: 10px;
+}
+.col2 {
+  margin: 10px;
+  margin-top: 80px;
+}
+.col3 {
+  margin: 10px;
+}
+.col4 {
+  margin: 10px;
+}
+.col5 {
+  margin: 10px;
+}
+
+.bildResto {
+  height: 300px;
+  width: 530px;
+  display: flex;
+  position: relative;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+.bildMat {
+  height: 300px;
+  width: 530px;
+  display: flex;
+  position: relative;
+  margin-bottom: 10px;
+}
+.bildMatsal {
+  width: 530px;
+}
+
+/*Container för textformulär för att boka en resa. Positionerar den i mitten och gör så att färgen blir vit på text*/
+.image-container {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-bottom: 15px;
+}
+/*Gör att bilden sträcker sig över hela containern*/
+.image-container img {
+  width: 80%;
+  height: auto;
+  object-fit: cover; /* Gör att bilden täcker hela ytan utan att förlora proportioner */
+}
+
+/*Jag vill att textformuläret ska vara ovanpå bilden, därmed har jag position absolute och 
+  ställer in exakt hur den ska positioneras. Gör även textrutan något transparent för att bilden bakom ska få synas.*/
+.text-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+  color: black;
+}
+//Inte gjort en boka sida men lagt till effekter som indikterar att man kan klicka sig dit
+.text-area:hover {
+  opacity: 70%;
+  cursor: pointer;
+}
