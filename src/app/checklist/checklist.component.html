@@ -1,19 +1,16 @@
 <ul>
   <h3>Köp en karta</h3>
   <li>
-    <input type="checkbox" />Köp en karta på nätet, i en friluftsbutik eller i
-    närmaste bokhandel. Den kostar mellan 100-200 kr och är väl investerade
-    pengar.
+    <input type="checkbox" id="checkbox1" [checked]="isChecked1" (change)="onCheckboxChange($event, 'checkbox1')"/>
+    Köp en karta på nätet, i en friluftsbutik eller i närmaste bokhandel. Den kostar mellan 100-200 kr och är väl investerade pengar.
   </li>
   <li>
-    <input type="checkbox" />Slå upp kartan och försök tolka hur terrängen och
-    naturen ser ut. Kan du hitta både Kebnekaises topp, fjällstationen och
-    Nikkaluokta? (beror såklart på vilken område kartan täcker)
+    <input type="checkbox" id="checkbox2" [checked]="isChecked2" (change)="onCheckboxChange($event, 'checkbox2')"/>
+    Slå upp kartan och försök tolka hur terrängen och naturen ser ut. Kan du hitta både Kebnekaises topp, fjällstationen och Nikkaluokta? (beror såklart på vilken område kartan täcker)
   </li>
   <li>
-    <input type="checkbox" />Kolla om någon led är utmärkt på kartan. Leden
-    mellan Nikkaluokta och Kebnekaise fjällstation bör minst vara utmärk, kanske
-    också västra leden(?)
+    <input type="checkbox" id="checkbox3" [checked]="isChecked3" (change)="onCheckboxChange($event, 'checkbox3')"/>
+    Kolla om någon led är utmärkt på kartan. Leden mellan Nikkaluokta och Kebnekaise fjällstation bör minst vara utmärkt, kanske också västra leden(?)
   </li>
   <li>
     <input type="checkbox" />Mitt i stora dalen Ladtjovagge, samma stora dal där

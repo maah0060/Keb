@@ -1,17 +1,18 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "DM Sans", serif;
 }
 
 nav {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
   height: 80px;
   display: flex;
   justify-content: center;
   position: fixed;
   width: 98vw;
   align-items: center;
+  z-index: 1000; 
 }
 ul {
   justify-content: space-around;
