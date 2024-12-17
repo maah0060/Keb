@@ -1,3 +1,7 @@
+<div class="inputDiv">
+  <input type="text" id="egenInput" class="egenInput" placeholder="Egen input..." #egenInput />
+  <button (click)="laggTillLista(egenInput.value)" id="addBtn">Lägg till i lista</button>
+</div>
 <ul>
   <h3>Köp en karta</h3>
   <li>
@@ -155,5 +159,13 @@
     individer som tar ansvar. Det är bättre att vända tillbaka än att bli fast
     på toppen orkeslösa i dåligt väder.
   </li>
+
+
+<div class="egenOutput" id="egenOutput">
+  <h3>Egna punkter</h3>
+
+    <li *ngFor="let punkt of egnaPunkter"><input type="checkbox" />{{ punkt }}</li>
+ 
+</div>
 </ul>
 <!--  <li><input type="checkbox" /></li>-->

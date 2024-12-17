@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common'; 
 
 @Component({
   selector: 'app-checklist',
+  standalone: true,  // Ange att det är en standalone-komponent
+  imports: [CommonModule],  // Lägg till CommonModule här
   templateUrl: './checklist.component.html',
   styleUrls: ['./checklist.component.scss']
 })
@@ -28,5 +31,29 @@ export class ChecklistComponent implements OnInit {
   getCheckboxStatus(checkboxId: string): boolean {
     const savedStatus = localStorage.getItem(checkboxId);
     return savedStatus ? JSON.parse(savedStatus) : false;
+  }
+
+ 
+  // För att hålla reda på de egna punkterna
+  egnaPunkter: string[] = [];
+
+  // Referens till inputfältet via ViewChild
+  @ViewChild('egenInput') egenInput: any;
+
+  // Funktion för att lägga till en punkt i listan
+  laggTillLista(egenInputValue: string): void {
+    if (egenInputValue.trim().length > 0) {
+      this.egnaPunkter.push(egenInputValue); // Lägg till punkten i arrayen
+      // Visa .egenOutput om listan inte är tom
+      const egenOutput = document.getElementById("egenOutput");
+      if (egenOutput) {
+        egenOutput.style.display = 'block';
+      }
+
+      // Töm inputfältet efter att punkten lagts till
+      if (this.egenInput) {
+        this.egenInput.nativeElement.value = ''; // Töm inputfältet
+      }
+    }
   }
 }

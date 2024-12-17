@@ -5,3 +5,31 @@ ul {
 input {
   margin: 10px;
 }
+.egenInput {
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  border: solid;
+  border-width: 0.1rem;
+  border-color: rgb(111, 164, 181);
+
+}
+button {
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  border: solid;
+  border-width: 0.1rem;
+  border-color: rgb(111, 164, 181);
+  box-shadow: 2px 5px 10px #c9c4c4;
+}
+button:hover {
+  opacity: 70%;
+  cursor: pointer;
+}
+.inputDiv {
+  text-align: center;
+}
+.egenOutput {
+  display: none;
+}
