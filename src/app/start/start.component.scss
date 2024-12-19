@@ -4,20 +4,47 @@ main {
 }
 h1 {
   text-align: center;
-  font-weight: 300;
+  font-weight: 500;
+  margin-bottom: 0;
 }
 h2 {
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .row {
   display: flex;
   background-color: rgb(242, 252, 255);
   margin: 40px;
+  margin-top: 5px;
+}
+
+.knapp {
+  text-align: center;
+}
+
+/*
+.row {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}*/
+.col1 {
+  width: 95%;
+}
+
+.col1 button {
+  margin: 0;
+}
+.col4 button {
+  margin: 0;
+  margin-bottom: 10px;
 }
 .col1 {
   width: 60vw;
   margin: 10px;
+  margin-top: 0;
 }
 
 .col2 {
@@ -89,8 +116,9 @@ button {
   box-shadow: 2px 5px 10px #c9c4c4;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  margin-left: 250px;
+
   margin-top: 15px;
+  margin-bottom: 15px;
   cursor: pointer;
 }
 @media screen and (max-width: 1257px) {
@@ -138,9 +166,10 @@ button {
 
   .col1 button {
     margin: 0;
+    margin-bottom: 15px;
   }
   .col4 button {
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 }

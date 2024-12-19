@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
@@ -23,11 +24,22 @@ import { StartComponent } from './start/start.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'c3Angular';
 
   // Variabel för att spåra menyns status
   isMenuActive = false;
+
+  constructor(private router: Router) {}
+
+  // scrolla till toppen när man byter route
+  ngOnInit(): void {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
+      }
+    });
+  }
 
   // Metod för att toggla menyn
   toggleMenu(): void {

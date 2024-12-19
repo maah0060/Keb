@@ -1,3 +1,8 @@
+* {
+  font-family: "DM Sans", serif;
+  font-weight: 300;
+}
+
 ul {
   list-style: none;
 }
@@ -12,7 +17,6 @@ input {
   border: solid;
   border-width: 0.1rem;
   border-color: rgb(111, 164, 181);
-
 }
 button {
   padding: 15px;
