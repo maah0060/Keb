@@ -1,3 +1,22 @@
+* {
+  font-family: "DM Sans", serif;
+  margin: 0;
+}
+
+main {
+  margin: 10px 100px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.container {
+  background-color: rgb(252, 245, 237);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 20px;
@@ -23,26 +42,6 @@
   text-align: center;
 }
 
-/* You can add global styles to this file, and also import other style files */
-* {
-  font-family: "DM Sans", serif;
-  margin: 0;
-}
-
-main {
-  margin: 10px 100px;
-  justify-content: center;
-  gap: 20px;
-}
-
-.container {
-  background-color: rgb(252, 245, 237);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 p {
   margin: 10px;
   text-align: center;
@@ -60,7 +59,6 @@ h1 {
 h3 {
   text-align: center;
   font-family: "DM Sans", serif;
-
 }
 .col {
   width: 70vw;
@@ -71,4 +69,45 @@ h3 {
 }
 h2 {
   text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  main {
+    margin: 20px; /* Tar bort sidmarginaler */
+  }
+
+  .container {
+    margin: 5px; /* Säkerställer att .container fyller hela sidan */
+  }
+
+  .card {
+    width: 100%;
+    margin: 0; /* Ingen extra marginal */
+  }
+
+  .row {
+    gap: 5px; /* Minska mellanrum mellan rader */
+  }
+
+  .column {
+    max-width: 100%; /* Tillåt kolumner att breda ut sig */
+    padding: 5px;
+  }
+
+  .video {
+    width: 90vw; /* Anpassa video till mindre skärmar */
+    height: auto; /* Bibehåll proportioner */
+  }
+
+  .col {
+    width: 90vw;
+    margin: 10px auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 5px; /* Minska vertikala marginaler */
+  }
 }

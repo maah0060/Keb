@@ -1,0 +1,42 @@
+input {
+  padding: 15px;
+  border-radius: 10px;
+  border: solid;
+  border-width: 1px;
+  border-color: rgb(111, 164, 181);
+  margin-bottom: 15px;
+  width: 100%;
+}
+button {
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  border: solid;
+  border-width: 1px;
+  border-color: rgb(111, 164, 181);
+  box-shadow: 2px 5px 10px #c9c4c4;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.row {
+  display: flex;
+  background-color: rgb(242, 252, 255);
+  margin: 40px;
+  text-align: center;
+  justify-content: center;
+}
+.col1 {
+  width: 60vw;
+  margin: 10px;
+}
+.bokning {
+  justify-content: start;
+  text-align: start;
+}
+@media screen and (max-width: 650px) {
+  .row {
+    margin: 5px;
+  }
+}

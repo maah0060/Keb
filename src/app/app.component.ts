@@ -9,6 +9,7 @@ import { StartComponent } from './start/start.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [
     RouterOutlet,
     RouterLink,
@@ -20,8 +21,16 @@ import { StartComponent } from './start/start.component';
     StartComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'c3Angular';
+
+  // Variabel för att spåra menyns status
+  isMenuActive = false;
+
+  // Metod för att toggla menyn
+  toggleMenu(): void {
+    this.isMenuActive = !this.isMenuActive; // Byter mellan true/false
+  }
 }

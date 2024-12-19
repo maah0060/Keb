@@ -1,54 +1,67 @@
-<body>
-  <main>
-    <div class="card">
-      <div class="row">
-        <div *ngFor="let weather of weatherList; let i = index" class="column">
-          <h3>{{ dates[i] }}</h3>
-          <p>
-            Temperatur: {{ weather.main.temp - 273.15 | number : "1.0-1" }} °C
-          </p>
-          <p>Väder: {{ weather.weather[0].description }}</p>
-          <p>Vindhastighet: {{ weather.wind.speed }} m/s</p>
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <div class="row">
+          <div
+            *ngFor="let weather of weatherList; let i = index"
+            class="column"
+          >
+            <h3>{{ dates[i] }}</h3>
+            <p>
+              Temperatur: {{ weather.main.temp - 273.15 | number : "1.0-1" }} °C
+            </p>
+            <p>Väder: {{ weather.weather[0].description }}</p>
+            <p>Vindhastighet: {{ weather.wind.speed }} m/s</p>
+          </div>
         </div>
       </div>
-    </div>
-    <section>
-      <div class="row">
-        <div class="col">
-          <h1>Inför din resa</h1>
-          <p>
-            Det är mycket att tänka på innan man ska ut och vandra. Här kan du
-            hitta information om närmaste väderprognosen samt förslag på
-            packlista
-          </p>
+      <section>
+        <div class="row">
+          <div class="col">
+            <h1>Inför din resa</h1>
+            <p>
+              Det är mycket att tänka på innan man ska ut och vandra. Här kan du
+              hitta information om närmaste väderprognosen samt förslag på
+              packlista
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
-    <section>
-      <div class="row">
-        <h2>Guide till säkrare bestignign av Kiruna Fjällräddarförening</h2>
-        <iframe
-          class="video"
-          width="700px"
-          height="400px"
-          src="https://www.youtube.com/embed/zDwf-jXigKo?si=HD1r-B7Ep6sSf-5H"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </section>
-    <section>
-      <div class="row">
-        <div class="col">
-          <h2>Checklista</h2>
-          <p>Nedan har vi samlat olika bra saker att tänka på innan du ska bestiga Kebnekaise. Om du vill använda vår lista för att planera din resa så kan du även lokalt lägga till egna punkter som du vill komma ihåg.</p>
-          
-          <app-checklist></app-checklist>
+      </section>
+      <section>
+        <div class="row">
+          <h2>Guide till säkrare bestignign av Kiruna Fjällräddarförening</h2>
+          <iframe
+            class="video"
+            src="https://www.youtube.com/embed/zDwf-jXigKo?si=HD1r-B7Ep6sSf-5H"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
         </div>
-      </div>
-    </section>
-  </main>
-</body>
+      </section>
+      <section>
+        <div class="row">
+          <div class="col">
+            <h2>Checklista</h2>
+            <p>
+              Nedan har vi samlat olika bra saker att tänka på innan du ska
+              bestiga Kebnekaise. Om du vill använda vår lista för att planera
+              din resa så kan du även lokalt lägga till egna punkter som du vill
+              komma ihåg.
+            </p>
+
+            <app-checklist></app-checklist>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

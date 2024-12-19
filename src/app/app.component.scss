@@ -12,25 +12,61 @@ nav {
   position: fixed;
   width: 98vw;
   align-items: center;
-  z-index: 1000; 
+  z-index: 1000;
 }
+
 ul {
   justify-content: space-around;
   list-style: none;
   display: flex;
 }
+
 li {
   align-items: center;
   margin: 10px;
 }
+
 .heroPic {
   margin-top: 0;
   width: 98vw;
   box-shadow: 2px 5px 10px #c9c4c4;
 }
+
 a {
   color: black;
 }
+
 a:hover {
   opacity: 30%;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 950px) {
+  nav {
+    display: none;
+  }
+
+  nav.active {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    height: auto;
+  }
+
+  .hamburger {
+    display: block;
+    position: fixed;
+  }
+  ul {
+    justify-content: space-around;
+    list-style: none;
+    display: block;
+  }
+  .heroPic {
+    box-shadow: none;
+  }
 }

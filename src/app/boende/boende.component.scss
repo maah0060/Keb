@@ -88,3 +88,65 @@ h2 {
   opacity: 70%;
   cursor: pointer;
 }
+.lillaElsas {
+  display: none;
+}
+.lillaFjall {
+  display: none;
+}
+@media screen and (max-width: 1257px) {
+  .orgElsas {
+    display: none;
+  }
+  .lillaElsas {
+    display: block;
+    background-color: rgb(242, 252, 255);
+    margin: 40px;
+    padding: 10px;
+  }
+  .bildResto {
+    height: auto;
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .bildMat {
+    height: auto;
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .bildMatsal {
+    width: 100%;
+  }
+  .orgFjall {
+    display: none;
+  }
+  .lillaFjall {
+    display: block;
+    background-color: rgb(242, 252, 255);
+    margin: 40px;
+    padding: 10px;
+  }
+  .bildStation {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .lillaElsas {
+    margin: 5px;
+  }
+  .row {
+    margin: 5px;
+  }
+  .lillaFjall {
+    margin: 5px;
+  }
+  .image-container img {
+    width: 100%;
+    margin: 5px;
+  }
+}
