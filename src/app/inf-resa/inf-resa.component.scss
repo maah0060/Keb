@@ -10,13 +10,10 @@ main {
   justify-content: center;
   gap: 20px;
 }
-
 .container {
-  background-color: rgb(252, 245, 237);
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column; /* Standardlayout */
+  gap: 20px;
 }
 
 .card {
@@ -88,6 +85,8 @@ h2 {
   .card {
     width: 100%;
     margin: 0; /* Ingen extra marginal */
+    padding: 0;
+    box-shadow: none;
   }
 
   .row {
@@ -97,6 +96,7 @@ h2 {
   .column {
     max-width: 100%; /* Tillåt kolumner att breda ut sig */
     padding: 5px;
+    border: none;
   }
 
   .video {
@@ -114,5 +114,9 @@ h2 {
   h3,
   p {
     margin: 5px; /* Minska vertikala marginaler */
+  }
+  //Byter plats så att inför din resa hamnar ovanför väderprognosen
+  .container {
+    flex-direction: column-reverse; /* Byter ordning */
   }
 }

@@ -87,8 +87,14 @@ h3 {
   transform: translate(-50%, -50%);
   background: rgba(255, 255, 255, 0.8);
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 100%;
   color: black;
+  width: 30vw;
+  height: 30vh;
+  font-size: 2rem;
+}
+.text-area h2 {
+  margin-top: 20%;
 }
 //Inte gjort en boka sida men lagt till effekter som indikterar att man kan klicka sig dit
 .text-area:hover {
@@ -145,6 +151,14 @@ h3 {
   }
   .bildStation {
     width: 100%;
+  }
+  .text-area {
+    width: auto;
+    height: auto;
+    font-size: 1rem;
+  }
+  .text-area h2 {
+    margin-top: 10%;
   }
 }
 @media screen and (max-width: 650px) {

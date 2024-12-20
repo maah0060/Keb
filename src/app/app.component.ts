@@ -32,11 +32,12 @@ export class AppComponent implements OnInit {
 
   constructor(private router: Router) {}
 
-  // scrolla till toppen när man byter route
   ngOnInit(): void {
+    // Scrolla till toppen när man byter route
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         window.scrollTo(0, 0);
+        this.isMenuActive = false; // Stäng menyn vid navigering
       }
     });
   }
@@ -44,5 +45,10 @@ export class AppComponent implements OnInit {
   // Metod för att toggla menyn
   toggleMenu(): void {
     this.isMenuActive = !this.isMenuActive; // Byter mellan true/false
+  }
+
+  // Stäng menyn manuellt när en länk klickas
+  closeMenu(): void {
+    this.isMenuActive = false;
   }
 }

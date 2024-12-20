@@ -19,10 +19,14 @@
     <!-- Dynamisk klassbindning för nav -->
     <nav [class.active]="isMenuActive">
       <ul>
-        <li><a routerLink="/">Start</a></li>
-        <li><a routerLink="/boende">Kebnekaise Fjällstation</a></li>
-        <li><a routerLink="/infresa">Inför resa</a></li>
-        <li><a routerLink="/booking">Boka</a></li>
+        <li><a routerLink="/" (click)="closeMenu()">Start</a></li>
+        <li>
+          <a routerLink="/boende" (click)="closeMenu()"
+            >Kebnekaise Fjällstation</a
+          >
+        </li>
+        <li><a routerLink="/infresa" (click)="closeMenu()">Inför resa</a></li>
+        <li><a routerLink="/booking" (click)="closeMenu()">Boka</a></li>
       </ul>
     </nav>
 
@@ -31,7 +35,8 @@
       <i class="fas fa-bars"></i>
     </div>
 
-    <img src="/images/heroKebSmal.jpg" alt="bild på keb" class="heroPic" />
+    <!--Referens: Elin Håkansson. https://kirunalapland.se/vandring/bestig-kebnekaise-sommar/ -->
+    <img src="/images/fakeKeb6.jpg" alt="bild på keb" class="heroPic" />
 
     <router-outlet></router-outlet>
     <app-footer></app-footer>
