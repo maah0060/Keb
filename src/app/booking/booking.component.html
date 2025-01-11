@@ -6,39 +6,41 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="row">
-      <div class="col1">
-        <h1>Boka din vistelse</h1>
-        <p>Vad kul att du vill boka din vistelse hos oss!</p>
-        <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
-          <label for="fornamn">Förnamn</label>
-          <input
-            type="text"
-            id="fornamn"
-            formControlName="fornamn"
-            placeholder="Förnamn"
-          />
-          <label for="efternamn">Efternamn</label>
-          <input
-            type="text"
-            id="efternamn"
-            formControlName="efternamn"
-            placeholder="Efternamn"
-          />
-          <label for="antguest">Antal gäster</label>
-          <input
-            type="number"
-            id="antguest"
-            formControlName="antguest"
-            placeholder="Antal gäster"
-          />
-          <label for="startDatum">Startdatum</label>
-          <input type="date" id="startDatum" formControlName="startDatum" />
-          <label for="slutDatum">Slutdatum</label>
-          <input type="date" id="slutDatum" formControlName="slutDatum" />
-          <button type="submit">Boka</button>
-        </form>
+    <main>
+      <div class="row">
+        <div class="col1">
+          <h1>Boka din vistelse</h1>
+          <p>Vad kul att du vill boka din vistelse hos oss!</p>
+          <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+            <label for="fornamn">Förnamn</label>
+            <input
+              type="text"
+              id="fornamn"
+              formControlName="fornamn"
+              placeholder="Förnamn"
+            />
+            <label for="efternamn">Efternamn</label>
+            <input
+              type="text"
+              id="efternamn"
+              formControlName="efternamn"
+              placeholder="Efternamn"
+            />
+            <label for="antguest">Antal gäster</label>
+            <input
+              type="number"
+              id="antguest"
+              formControlName="antguest"
+              placeholder="Antal gäster"
+            />
+            <label for="startDatum">Startdatum</label>
+            <input type="date" id="startDatum" formControlName="startDatum" />
+            <label for="slutDatum">Slutdatum</label>
+            <input type="date" id="slutDatum" formControlName="slutDatum" />
+            <button type="submit">Boka</button>
+          </form>
+        </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>

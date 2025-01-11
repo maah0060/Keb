@@ -60,6 +60,7 @@ a:hover {
   .hamburger {
     display: block;
     position: fixed;
+    top: 12px;
   }
   ul {
     justify-content: space-around;
@@ -68,5 +69,8 @@ a:hover {
   }
   .heroPic {
     display: none;
+  }
+  main {
+    margin-top: 30px;
   }
 }
